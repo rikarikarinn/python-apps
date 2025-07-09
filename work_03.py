@@ -36,3 +36,4 @@ while True:
         print("正解！")
     else:
         print(f"不正解 正解は{prefecture}")
+        
