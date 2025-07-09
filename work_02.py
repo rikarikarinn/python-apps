@@ -18,6 +18,20 @@ if re_time < 0.01:
 else:
     print(f"速度は{re_time:.4f}秒")
 
-
-
-
+def ask_yes_no(prompt="もう一回やりますか？"):
+    while True:
+        answer = input(prompt).strip().lower()
+        if answer in ("yes"):
+            return True
+        if answer in ("no"):
+            return False
+        print("入力が無効ですYesかNOで答えてください")
+    
+def main():
+    while True:
+        
+        if not ask_yes_no():
+            print("さようなら")
+            break
+if __name__ == "__main__":
+    main()
