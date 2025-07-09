@@ -1,22 +1,24 @@
 import time
 import random
 
-t = random.uniform(5,15)
-time.sleep(t)
+def reaction_test():
+    t = random.uniform(5,15)
+    time.sleep(t)
 
-print("押す")
+    print("押す")
 
-start_time = time.time()
-input()
-end_time = time.time()
+    start_time = time.time()
+    input()
+    end_time = time.time()
  
 
-re_time = end_time - start_time
+    re_time = end_time - start_time
 
-if re_time < 0.01:
-    print("早すぎます")
-else:
-    print(f"速度は{re_time:.4f}秒")
+    if re_time < 0.01:
+        print("早すぎます")
+    else:
+        print(f"速度は{re_time:.4f}秒")   
+
 
 def ask_yes_no(prompt="もう一回やりますか？"):
     while True:
@@ -29,7 +31,7 @@ def ask_yes_no(prompt="もう一回やりますか？"):
     
 def main():
     while True:
-        
+        reaction_test()
         if not ask_yes_no():
             print("さようなら")
             break
